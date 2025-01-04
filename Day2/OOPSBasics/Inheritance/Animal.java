@@ -1,4 +1,4 @@
-package Day2.OOPSBasics;
+package Day2.OOPSBasics.Inheritance;
 
 class Animal {
     public void speak(){
@@ -18,10 +18,11 @@ class Cat extends Animal{
 }
 class Main{
     public static void main(String[] args){
-        Dog obj1=new Dog();
+        Animal obj1=new Dog();
         obj1.speak();
 
-        Cat obj2=new Cat();
+        Animal obj2=new Cat();
         obj2.speak();
+
     }
 }
