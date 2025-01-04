@@ -1,4 +1,4 @@
-package Day6;
+package Day6.LangClass;
 
 public class MathProblems {
     public static void main(String[] args) {

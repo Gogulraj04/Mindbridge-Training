@@ -1,4 +1,4 @@
-package Day6;
+package Day6.clone;
 
 public class Student implements Cloneable{
     String name;

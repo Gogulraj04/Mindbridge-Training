@@ -1,4 +1,4 @@
-package Day6;
+package Day6.LangObjects;
 
 public class LangObject_Demo {
     String name;
