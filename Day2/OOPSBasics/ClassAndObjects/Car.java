@@ -6,9 +6,9 @@ package Day2.OOPSBasics;
 import java.util.Scanner;
 
 class Car {
-    String brand;
-    String model;
-    double price;
+    public String brand;
+    public String model;
+    private double price;
 
     Car(String brand1,String model1,double price1){
         this.brand=brand1;

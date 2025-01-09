@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 //Create a program to manage a library system using OOP concepts, including classes for Book, Member, and Librarian.
 class Book{
-    int bookId;
-    String author;
-    String title;
-    boolean isavailable;
+    public int bookId;
+    public String author;
+    public String title;
+    public boolean isavailable;
 
     Book(int bookId,String author,String title){
         this.bookId=bookId;
@@ -41,8 +41,8 @@ class Book{
 }
 
 class Member{
-    int memberId;
-    String memberName;
+    private int memberId;
+    private String memberName;
 
     Member(int id,String name){
         this.memberId=id;
@@ -61,8 +61,8 @@ class Member{
 }
 
 class Librarian{
-    ArrayList<Book> books=new ArrayList<>();
-    ArrayList<Member> members=new ArrayList<>();
+    public ArrayList<Book> books=new ArrayList<>();
+    protected ArrayList<Member> members=new ArrayList<>();
 
     public void addBook(Book book){
         books.add(book);

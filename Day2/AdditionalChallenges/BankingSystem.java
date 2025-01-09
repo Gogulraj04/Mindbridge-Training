@@ -3,9 +3,9 @@ package Day2.AdditionalChallenges;
 import java.util.HashMap;
 import java.util.Scanner;
 class Bank{
-    long accountNumber;
-    String accountName;
-    double balance;
+    private long accountNumber;
+    protected String accountName;
+    private double balance;
 
     Bank(long accountNumber,String accountName){
         this.accountNumber=accountNumber;
@@ -46,74 +46,79 @@ class Bank{
     }
 }
 public class BankingSystem {
-    static Scanner sc=new Scanner(System.in);
-    static HashMap<Long,Bank> mapp=new HashMap<>();
+    static Scanner sc = new Scanner(System.in);
+    private static HashMap<Long, Bank> mapp = new HashMap<>();
 
-    public static void accountOpening(){
+    public static void accountOpening() {
         System.out.println("Enter Account number : ");
-        long accountNumber=sc.nextLong();
+        long accountNumber = sc.nextLong();
         sc.nextLine();
-        if(mapp.containsKey(accountNumber)){
-           System.out.println("Account number already exists");
-           return;
+        if (mapp.containsKey(accountNumber)) {
+            System.out.println("Account number already exists");
+            return;
         }
         System.out.println("Enter account name : ");
-        String name=sc.nextLine();
-        Bank account=new Bank(accountNumber,name);
-        mapp.put(accountNumber,account);
+        String name = sc.nextLine();
+        Bank account = new Bank(accountNumber, name);
+        mapp.put(accountNumber, account);
         System.out.println("Acount created sucessfully..!!");
     }
 
-    public static void deposite(){
+    public static void deposite() {
         System.out.println("Enter Account number : ");
-        long accountNumber=sc.nextLong();
-        Bank account=mapp.get(accountNumber);
-        if(account !=null){
+        long accountNumber = sc.nextLong();
+        Bank account = mapp.get(accountNumber);
+        if (account != null) {
             System.out.println("Enter amount to deposite : ");
-            double amount=sc.nextDouble();
+            double amount = sc.nextDouble();
             account.deposite(amount);
-        }else{
+        } else {
             System.out.println("Account not found");
         }
     }
 
-    public static void withdraw(){
+    public static void withdraw() {
         System.out.println("Enter Account number : ");
-        long accountNumber=sc.nextLong();
-        Bank account=mapp.get(accountNumber);
-        if(account !=null){
+        long accountNumber = sc.nextLong();
+        Bank account = mapp.get(accountNumber);
+        if (account != null) {
             System.out.println("Enter amount to withdraw : ");
-            double amount=sc.nextDouble();
+            double amount = sc.nextDouble();
             account.withdraw(amount);
-        }else{
+        } else {
             System.out.println("Account not found");
         }
     }
-    public static void checkBalance(){
+
+    public static void checkBalance() {
         System.out.println("Enter account number");
-        long accountNumber=sc.nextLong();
-        Bank account=mapp.get(accountNumber);
-        if(account!=null){
+        long accountNumber = sc.nextLong();
+        Bank account = mapp.get(accountNumber);
+        if (account != null) {
             account.checkBalance();
-        }else{
+        } else {
             System.out.println("Account not found");
         }
     }
-    public static void displayAccountDetails(){
+
+    public static void displayAccountDetails() {
         System.out.println("Enter account number");
-        long accountNumber=sc.nextLong();
-        Bank account=mapp.get(accountNumber);
-        if(account!=null){
+        long accountNumber = sc.nextLong();
+        Bank account = mapp.get(accountNumber);
+        if (account != null) {
             System.out.println("------------Your Account details------------");
             account.displayDetails();
-        }else{
+        } else {
             System.out.println("Account not found");
         }
     }
+}
+class User extends BankingSystem{
+
     public static void main(String[] args){
-
+        Scanner sc=new Scanner(System.in);
         System.out.println("Welcome to maze bank");
-
+//        BankingSystem admin=new BankingSystem();
         while(true){
             System.out.println("Services");
             System.out.println("1. Account opening");

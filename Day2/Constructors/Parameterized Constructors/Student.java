@@ -1,8 +1,8 @@
 package Day2.Constructors;
 
 class Student {
-    String name;
-    int age;
+    private String name;
+    private int age;
     Student(){
         this.name=null;
         this.age=0;

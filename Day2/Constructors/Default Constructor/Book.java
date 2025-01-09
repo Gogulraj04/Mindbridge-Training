@@ -1,8 +1,8 @@
 package Day2.Constructors;
 
 public class Book {
-    String title;
-    String author;
+    public String title;
+    public String author;
 
     Book(){
         this.title=null;
