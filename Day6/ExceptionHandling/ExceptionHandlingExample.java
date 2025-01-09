@@ -8,12 +8,11 @@ public class ExceptionHandlingExample {
         Scanner sc = new Scanner(System.in);
         int num1=0;
         int num2=0;
-        int ans;
         try {
             num1 = sc.nextInt();
             num2 = sc.nextInt();
 
-            ans=num1/num2;
+            int ans=num1/num2;
 
         }
         catch (InputMismatchException e){

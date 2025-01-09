@@ -1,8 +1,8 @@
 package Day6.clone;
 
 public class Student implements Cloneable{
-    String name;
-    Integer age;
+    public String name;
+    public Integer age;
     Student(String name,int age){
         this.name=name;
         this.age=age;

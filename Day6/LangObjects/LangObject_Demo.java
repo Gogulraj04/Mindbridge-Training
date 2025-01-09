@@ -1,8 +1,8 @@
 package Day6.LangObjects;
 
 public class LangObject_Demo {
-    String name;
-    int num;
+    public String name;
+    public int num;
 
     LangObject_Demo(String name,int num){
         this.name=name;
