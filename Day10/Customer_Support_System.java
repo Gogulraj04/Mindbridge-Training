@@ -3,7 +3,7 @@ package Day10;
 import java.util.*;
 
 public class Customer_Support_System {
-    static Queue<String> queue=new LinkedList<>();
+    static private Queue<String> queue=new LinkedList<>();
 
     static void addCustomer(String name){
         queue.add(name);

@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Student_Database {
-    static Map<String,Integer> mpp=new HashMap<>();
+    private static Map<String,Integer> mpp=new HashMap<>();
 
     static void addStudent(String name,int grade){
         mpp.put(name,grade);

@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Stack_UndoFunctionality {
-    static Stack<String> st=new Stack<>();
+    static private Stack<String> st=new Stack<>();
 
     static void push(String input){
         st.push(input);

@@ -3,7 +3,7 @@ package Day10;
 import java.util.*;
 
 public class SetExample {
-    static Set<String> set=new HashSet<>();
+    private static Set<String> set=new HashSet<>();
     static void addSet(String name){
         set.add(name);
         System.out.println("Set added successfuly!");

@@ -5,7 +5,7 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class LinkedList_Example {
-    static LinkedList<String> ll=new LinkedList<>();
+    private static LinkedList<String> ll=new LinkedList<>();
     static Scanner sc=new Scanner(System.in);
 
     static void addTask(String task){
