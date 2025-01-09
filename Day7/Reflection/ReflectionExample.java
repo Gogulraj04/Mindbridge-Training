@@ -1,14 +1,13 @@
-package Day7;
+package Day7.Reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.sql.SQLOutput;
 
 public class ReflectionExample {
     public static void main(String[] args) {
         try{
-            Class c1=Class.forName("Day7.Person");
+            Class c1=Class.forName("Day7.Reflection.Person");
             //Methods
             Method method[]=c1.getDeclaredMethods();
             for (int i=0;i< method.length;i++){

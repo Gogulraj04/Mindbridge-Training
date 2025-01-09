@@ -1,8 +1,8 @@
-package Day7;
+package Day7.Reflection;
 
 public class Person {
-    String name;
-    int age;
+    private String name;
+    private int age;
     Person(){
 
     }

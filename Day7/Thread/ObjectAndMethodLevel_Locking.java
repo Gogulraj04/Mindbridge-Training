@@ -36,9 +36,9 @@ class SharedPrinter{
     }
 }
 class MyThread3 implements Runnable{
-    SharedPrinter obj;
-    String s;
-    int times;
+    private SharedPrinter obj;
+    private String s;
+    private int times;
 
     MyThread3(SharedPrinter obj,String s,int times) {
         this.obj = obj;
@@ -50,8 +50,8 @@ class MyThread3 implements Runnable{
     }
 }
 class MyThread4 implements Runnable{
-    SharedPrinter obj;
-    int count;
+    private SharedPrinter obj;
+    private int count;
     MyThread4(SharedPrinter obj,int count){
         this.obj=obj;
         this.count=count;
