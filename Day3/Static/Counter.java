@@ -1,7 +1,7 @@
 package Day3;
 
 class Counter {
-    static int count;
+    public static int count;
 
     static {
 //        count=0;

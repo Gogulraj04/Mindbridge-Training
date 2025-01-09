@@ -1,4 +1,4 @@
-package Day3;
+package Day3.Inheritance_1;
 
 
 class Person {

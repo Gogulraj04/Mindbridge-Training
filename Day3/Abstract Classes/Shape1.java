@@ -4,7 +4,7 @@ abstract class Shape1 {
     abstract double calculateArea();
 }
 class Circle1 extends Shape1{
-   int side;
+   public int side;
    Circle1(int side){
        this.side=side;
    }
@@ -14,8 +14,8 @@ class Circle1 extends Shape1{
 
 }
 class Rectangle1 extends Shape1{
-    int length;
-    int breadth;
+    public int length;
+    public int breadth;
     Rectangle1(int length,int breadth){
         this.length=length;
         this.breadth=breadth;

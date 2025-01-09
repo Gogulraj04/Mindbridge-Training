@@ -7,8 +7,8 @@ class Shape {
     }
 }
 class Rectangle extends Shape{
-    int length;
-    int breadth;
+    public int length;
+    public int breadth;
 
     public Rectangle(int length,int breadth){
         this.length=length;
@@ -19,7 +19,7 @@ class Rectangle extends Shape{
     }
 }
 class Square extends Rectangle{
-    int side;
+    public int side;
 
     public Square(int side){
         super(side,side);
