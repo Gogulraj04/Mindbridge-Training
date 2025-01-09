@@ -14,10 +14,14 @@ enum Season{
     }
 }
 public class Season_Temperature {
+    Season_Temperature(String temp){
+
+    }
     public static void main(String[] args) {
         Season s=Season.WINTER;
 //        System.out.println(s.getAverageTemperature(s));
 //        System.out.println(s.temperature);
+
         for(Season i:Season.values()){
             System.out.println(i+" "+i.temperature);
         }
