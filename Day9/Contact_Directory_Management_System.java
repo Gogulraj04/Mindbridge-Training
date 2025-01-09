@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Contact_Directory_Management_System {
     static Scanner sc = new Scanner(System.in);
-    static Hashtable<String, Long> directory = new Hashtable<>();
+    private static Hashtable<String, Long> directory = new Hashtable<>();
 
     static void addContacts(String name, long number) {
         directory.put(name, number);

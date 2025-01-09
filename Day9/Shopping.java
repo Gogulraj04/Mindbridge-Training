@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Shopping {
-    static ArrayList<String> arr=new ArrayList<>();
+    private static ArrayList<String> arr=new ArrayList<>();
 
     static void addItem(String item){
         arr.add(item);

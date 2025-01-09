@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Student_Grades_Management_System {
     static Scanner sc=new Scanner(System.in);
-    static Vector<Integer> vector=new Vector<>();
+    private static Vector<Integer> vector=new Vector<>();
 
     static void addGrade(int strength){
         for(int i=0;i<strength;i++){
