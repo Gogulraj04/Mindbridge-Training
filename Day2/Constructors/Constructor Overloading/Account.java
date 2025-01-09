@@ -1,8 +1,8 @@
 package Day2.Constructors;
 
 class Account {
-    long accountNumber;
-    double balance;
+    private long accountNumber;
+    private double balance;
 
     Account(){
         this.accountNumber=0;
