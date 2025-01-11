@@ -14,7 +14,7 @@ class MyThread extends Thread{
     }
     public void run(){
         obj.vote(candidate);
-        System.out.println(Thread.currentThread().getName()+" You voted for the candidate : "+candidate);
+        System.out.println(Thread.currentThread().getName()+" U voted for the candidate : "+candidate);
     }
 }
 public class Online_Voting_System {
@@ -27,15 +27,14 @@ public class Online_Voting_System {
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        String[] candidates={"adams","gogul","vishnu","pavi"};
-        System.out.println("----- Election Voting -----");
+        String[] candidates={"gogul","vishnu","adams","pavi"};
+        System.out.println("----- Election -----");
 
         Online_Voting_System obj=new Online_Voting_System();
 
         MyThread t1=new MyThread(obj,"gogul");
         MyThread t2=new MyThread(obj,"pavi");
         MyThread t3=new MyThread(obj,"adams");
-        MyThread t8=new MyThread(obj,"adams");
         MyThread t4=new MyThread(obj,"gogul");
         MyThread t5=new MyThread(obj,"gogul");
         MyThread t6=new MyThread(obj,"vishnu");
@@ -48,7 +47,6 @@ public class Online_Voting_System {
         t5.start();
         t6.start();
         t7.start();
-        t8.start();
 
         try {
             t1.join();
@@ -58,7 +56,6 @@ public class Online_Voting_System {
             t5.join();
             t6.join();
             t7.join();
-            t8.join();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
