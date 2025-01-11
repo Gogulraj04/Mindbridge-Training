@@ -22,7 +22,7 @@ class Box<T> {
 public class GenericsExample {
     public static void main(String[] args) {
         Box<String> b1=new Box<>();
-        b1.setItems("pen");
+        b1.setItems("pencil");
         b1.getItems();
         b1.printItems();
         System.out.println(b1.isTypeOf(String.class));
@@ -31,7 +31,7 @@ public class GenericsExample {
         System.out.println();
 
         Box<Integer> b2=new Box<>();
-        b2.setItems(10);
+        b2.setItems(28);
         b2.getItems();
         b2.printItems();
         System.out.println(b2.isTypeOf(String.class));
@@ -40,7 +40,7 @@ public class GenericsExample {
         System.out.println();
 
         Box<Double> b3=new Box<>();
-        b3.setItems(2345.6543);
+        b3.setItems(5432.6543);
         b3.getItems();
         b3.printItems();
         System.out.println(b3.isTypeOf(String.class));
