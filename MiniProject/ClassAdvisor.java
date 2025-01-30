@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ClassAdvisor {
 
     public static Scanner sc=new Scanner(System.in);
-    private static final String FILE_NAME="student.JSON";
+    private static String FILE_NAME = "/Users/gogul/Documents/Training/Mindbridge Training/src/MiniProject/student.JSON";
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private static final File file=new File(FILE_NAME);
     private static Map<Integer,Student> studentMap=new LinkedHashMap<>();
@@ -199,7 +199,6 @@ public class ClassAdvisor {
 
 //    Retrive student's data from the JSON file
     public static void retriveStudent(){
-        new Thread(() ->{
             try{
                 if(!file.exists()){
                     System.out.println("❌ Not saved student data , Please save and retrive!");
@@ -209,10 +208,10 @@ public class ClassAdvisor {
                 if(studentMap.isEmpty()){
                     System.out.println("❌ No student data!");
                 }
+                System.out.println("✅ Data retrived..!");
             }catch (IOException e){
                 System.out.println("❌ Error to load student data!"+e.getMessage());
             }
-        }).start();
     }
 
 //    Sort the Student's by name

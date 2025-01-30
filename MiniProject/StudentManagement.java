@@ -7,9 +7,8 @@ public class StudentManagement {
     public static void main(String[] args) {
         System.out.println("------------ Student Management System \uD83E\uDD0D -----------");
         ClassAdvisor advisor=new ClassAdvisor();
-        System.out.println("If you want to retrive old data press \'@\' or press any button to continue");
-        if(sc.nextLine().equals("@")){
-            System.out.println("✅ Data retrived..!");
+        System.out.println("If you want to retrive old data type \'yes\' or type \'no\' to continue");
+        if(sc.nextLine().equals("yes")){
             advisor.retriveStudent();
         }
         while (true){
@@ -75,7 +74,8 @@ public class StudentManagement {
                     while (exit){
                         System.out.println("1. Sort by Name"+"\n"
                                 +"2. Sort by age"+"\n"
-                                +"3. Filter by grade"+"\n");
+                                +"3. Filter by grade"+"\n"
+                                +"0. Exit"+"\n");
                         System.out.print("Enter the choice :");
                         choice=sc.nextInt();
                         System.out.println("--------------------------");
