@@ -57,7 +57,7 @@ class Students{
 public class DepartmentTopScore {
     public static void findTopScorer(List<Students> students){
         students.stream().collect(Collectors.groupingBy(Students::getDepartment,
-                Collectors.maxBy(Comparator.comparingInt(Students::getMarks))))
+                Collectors.maxBy(Comparator.comparing(Students::getMarks))))
                 .forEach((dept,top) -> System.out.println(dept+" : "+top.orElse(null)));
 
     }

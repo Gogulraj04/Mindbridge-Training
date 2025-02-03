@@ -5,7 +5,7 @@ import java.sql.*;
 public class JDBC_Example {
     public static void main(String[] args) {
         try{
-            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost/Student","root","#Amaterasu@1224");
+            Connection connection= DriverManager.getConnection("jdbc:mysql://localhost/Student","root","madara@24");
             Statement stm1=connection.createStatement();
 //          Insert the value to the table
             String query="INSERT INTO Student_Details(id,name,age,mark) VALUES (101,\"gogul\",21,97)";
@@ -20,7 +20,7 @@ public class JDBC_Example {
             rs=stm1.executeUpdate(query);
             System.out.println("Affected rows : "+rs);
 
-//            display the student details
+//          Display the student details
             ResultSet resultSet=stm1.executeQuery("SELECT * FROM Student_Details");
             while (resultSet.next()){
                 System.out.println("Student ID : "+resultSet.getInt(1));

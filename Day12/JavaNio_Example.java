@@ -53,7 +53,5 @@ public class JavaNio_Example {
         while(cb.hasRemaining()){
             System.out.println(cb.get());
         }
-
-
     }
 }

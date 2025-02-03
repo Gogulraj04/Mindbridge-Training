@@ -3,7 +3,6 @@ package Day17;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Function;
 
 public class CompareAndSort {
     public static void main(String[] args) {

@@ -32,7 +32,7 @@ public class Palindrome {
         System.out.println(isPalindrome("gogul"));
         System.out.println(isPalindrome("Madam"));
         System.out.println(isPalindrome(""));
-        System.out.println(isPalindrome("z"));
+        System.out.println(isPalindrome("a"));
         System.out.println(isPalindrome(null));
         System.out.println(isPalindrome("g@gul"));
     }

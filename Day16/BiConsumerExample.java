@@ -2,7 +2,6 @@ package Day16;
 
 import java.util.Scanner;
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 public class BiConsumerExample {
     public static void main(String[] args) {
