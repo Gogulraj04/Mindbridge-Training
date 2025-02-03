@@ -98,7 +98,7 @@ public class StudentManagement {
                                 break;
 
                             default:
-                                System.out.println("Enter valid choice!");
+                                System.out.println("❌ Enter valid choice!");
                         }
 
                     }
