@@ -16,7 +16,7 @@ public class ClassAdvisor {
     private static String FILE_NAME = "/Users/gogul/Documents/Training/Mindbridge Training/src/MiniProject/student.JSON";
     private static final ObjectMapper objectMapper = new ObjectMapper();
     private static final File file=new File(FILE_NAME);
-    private static Map<Integer,Student> studentMap=new LinkedHashMap<>();
+    private static Map<Integer,Student> studentMap=new TreeMap<>();
 
 //    checks the email is vaild or not
     public static boolean checkEmail(String email){
@@ -57,7 +57,6 @@ public class ClassAdvisor {
             }
             Student student=new Student(id,name,age,marks,email);
             studentMap.put(id,student);
-
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -156,7 +155,7 @@ public class ClassAdvisor {
             if(id==0) return;
             boolean remove=studentMap.entrySet().removeIf((entry -> entry.getKey().equals(id)));
             if(remove){
-                System.out.println("Student ID : \"+id+\" deleted sucessfully!");
+                System.out.println("Student ID : "+id +"deleted sucessfully!");
                 saveStudents();
             }else {
                 System.out.println("❌ Student not found!");
@@ -166,10 +165,17 @@ public class ClassAdvisor {
 
 //    Display student details by their ID
     public static void displaySpecificStudent(int id){
-        studentMap.entrySet()
+        Optional<Map.Entry<Integer, Student>> student = studentMap.entrySet()
                 .stream()
                 .filter(entry -> entry.getKey().equals(id))
-                .forEach(System.out::println);// Filter by student ID
+                .findFirst();
+
+        if (student.isPresent()) {
+            System.out.println(student.get());
+        } else {
+            System.out.println("❌ Student not found!");
+        }
+
     }
 
 //Display All Student's
@@ -183,7 +189,7 @@ public class ClassAdvisor {
     public static void saveStudents(){
         Thread t=new Thread(() ->{
             try{
-                objectMapper.writeValue(file,studentMap);
+                objectMapper.writerWithDefaultPrettyPrinter().writeValue(file,studentMap);
             }catch (IOException e){
                 System.out.println("❌ Error for saving student's data into "+FILE_NAME+" "+e.getMessage());
             }
@@ -204,7 +210,7 @@ public class ClassAdvisor {
                     System.out.println("❌ Not saved student data , Please save and retrive!");
                     return;
                 }
-                studentMap=objectMapper.readValue(file, new TypeReference<Map<Integer, Student>>(){});
+                studentMap=objectMapper.readValue(file, new TypeReference<TreeMap<Integer, Student>>(){});
                 if(studentMap.isEmpty()){
                     System.out.println("❌ No student data!");
                 }

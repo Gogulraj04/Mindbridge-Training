@@ -10,8 +10,7 @@ public class Student {
     private char grade;
     private String email;
 
-    public Student() {
-    }
+    public Student() {}
 
     public Student(int id, String name, int age, List<Integer> marks, String email) {
         this.id = id;
